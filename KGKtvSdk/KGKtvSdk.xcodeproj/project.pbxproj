@@ -26,6 +26,8 @@
 		B4A7DDE41CB6805100BE6266 /* EfficiencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A7DDDA1CB6805100BE6266 /* EfficiencyViewController.m */; };
 		B4A7DDE51CB6805100BE6266 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A7DDDC1CB6805100BE6266 /* TabBarViewController.m */; };
 		B4A7DDE61CB6805100BE6266 /* KTVModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A7DDE01CB6805100BE6266 /* KTVModalView.m */; };
+		D6BEC6851CCF650300AA7516 /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BEC6841CCF650300AA7516 /* Animation.storyboard */; };
+		D6BEC6881CCF656900AA7516 /* Performance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BEC6861CCF656900AA7516 /* Performance.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		B4A7DDDC1CB6805100BE6266 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		B4A7DDDF1CB6805100BE6266 /* KTVModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVModalView.h; sourceTree = "<group>"; };
 		B4A7DDE01CB6805100BE6266 /* KTVModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVModalView.m; sourceTree = "<group>"; };
+		D6BEC6841CCF650300AA7516 /* Animation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Animation.storyboard; sourceTree = "<group>"; };
+		D6BEC6871CCF656900AA7516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Performance.storyboard; sourceTree = "<group>"; };
 		FA2565192AEA025CA1A6D3CE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,8 @@
 				18F188B11CB2B4090090677B /* AppDelegate.h */,
 				18F188B21CB2B4090090677B /* AppDelegate.m */,
 				18F188B71CB2B4090090677B /* Main.storyboard */,
+				D6BEC6861CCF656900AA7516 /* Performance.storyboard */,
+				D6BEC6841CCF650300AA7516 /* Animation.storyboard */,
 				18F188AE1CB2B4090090677B /* Supporting Files */,
 			);
 			path = KGKtvSdk;
@@ -380,6 +386,8 @@
 				18F188BE1CB2B4090090677B /* LaunchScreen.storyboard in Resources */,
 				18F188BB1CB2B4090090677B /* Assets.xcassets in Resources */,
 				18F188B91CB2B4090090677B /* Main.storyboard in Resources */,
+				D6BEC6851CCF650300AA7516 /* Animation.storyboard in Resources */,
+				D6BEC6881CCF656900AA7516 /* Performance.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +522,14 @@
 				18F188BD1CB2B4090090677B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D6BEC6861CCF656900AA7516 /* Performance.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6BEC6871CCF656900AA7516 /* Base */,
+			);
+			name = Performance.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

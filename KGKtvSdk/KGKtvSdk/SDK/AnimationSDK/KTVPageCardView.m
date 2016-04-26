@@ -148,36 +148,30 @@
     }
 }
 
-//- (void)addDragView:(UIView *)view {
-//    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
-//                                                                                 action:@selector(handlePan:)];
-//    
-//    view = [[UIControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-//    view.center = self.center;
-//    view.layer.cornerRadius = CGRectGetWidth(self.dragView.bounds)/2;
-//    view.backgroundColor = [UIColor customBlueColor];
-//    view addTarget:self action:@selector(touchDown:) forControlEvents:UIControlEventTouchDown];
-//    view addGestureRecognizer:recognizer];
-//}
-//
+- (void)addDragView:(UIView *)view {
+    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                                 action:@selector(handlePan:)];
+    [view addGestureRecognizer:recognizer];
+}
+
 //- (void)touchDown:(UIControl *)sender {
 //    [sender.layer pop_removeAllAnimations];
 //}
-//
-//- (void)handlePan:(UIPanGestureRecognizer *)recognizer
-//{
-//    CGPoint translation = [recognizer translationInView:self.view];
-//    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x,
-//                                         recognizer.view.center.y + translation.y);
-//    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
-//    
-//    if(recognizer.state == UIGestureRecognizerStateEnded) {
-//        CGPoint velocity = [recognizer velocityInView:self.view];
-//        POPDecayAnimation *positionAnimation = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPosition];
-//        positionAnimation.delegate = self;
-//        positionAnimation.velocity = [NSValue valueWithCGPoint:velocity];
-//        [recognizer.view.layer pop_addAnimation:positionAnimation forKey:@"layerPositionAnimation"];
-//    }
-//}
+
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer
+{
+    CGPoint translation = [recognizer translationInView:self];
+    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x,
+                                         recognizer.view.center.y + translation.y);
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self];
+    
+    if(recognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint velocity = [recognizer velocityInView:self];
+        POPDecayAnimation *positionAnimation = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPosition];
+        positionAnimation.delegate = self;
+        positionAnimation.velocity = [NSValue valueWithCGPoint:velocity];
+        [recognizer.view.layer pop_addAnimation:positionAnimation forKey:@"layerPositionAnimation"];
+    }
+}
 
 @end

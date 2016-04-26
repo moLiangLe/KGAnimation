@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pageCardView = [[KTVPageCardView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width)];
+    self.pageCardView = [[KTVPageCardView alloc] initWithFrame:CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.width)];
     self.pageCardView.delegate = self;
     self.pageCardView.datasource = self;
     [self.view addSubview:self.pageCardView];
